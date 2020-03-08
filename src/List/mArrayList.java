@@ -106,7 +106,8 @@ public class mArrayList<E> implements List<E>{
 
     @Override
     public void clear() {
-
+        this.array=null;
+        size=0;
     }
 
     @Override
