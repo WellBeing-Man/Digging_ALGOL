@@ -95,8 +95,6 @@ public class mArrayList<E> implements List<E>{
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        System.out.println(Boolean.TRUE.toString());
-        System.out.println(Boolean.FALSE.toString());
         boolean flag=false;
         for(Object object:c){
             flag |=remove(object);

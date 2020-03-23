@@ -32,14 +32,21 @@ public class mLinkedList<E> implements List<E> {
     @Override
     public int indexOf(Object o) {
         ListNode node=head;
-        int index=0;
-        for(;node.next!=null;node=node.next){
-            if(node.data==o){
-                return index;
+        for(int i=0;i<size;i++){
+            if(equals(o,node.data)){
+                return i;
             }
-            index++;
+            node=node.next;
         }
         return -1;
+    }
+
+    private boolean equals(Object o, Object data) {
+        if(o==null){
+            return o==data;
+        }else {
+            return o.equals(data);
+        }
     }
 
     @Override
@@ -49,21 +56,12 @@ public class mLinkedList<E> implements List<E> {
 
     @Override
     public boolean isEmpty() {
-        if(size==0){
-            return true;
-        }else {
-            return false;
-        }
+        return size==0;
     }
 
     @Override
     public boolean contains(Object o) {
-        if(indexOf(o)==-1){
-            return false;
-        }else
-        {
-            return true;
-        }
+        return indexOf(o)!=-1;
     }
 
     @Override
@@ -73,7 +71,13 @@ public class mLinkedList<E> implements List<E> {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        Object[] array=(E[]) new Object[size];
+        ListNode node=head;
+        for(int i=0;i<size;i++){
+            array[i]=node.data;
+            node=node.next;
+        }
+        return array;
     }
 
     @Override
@@ -84,20 +88,12 @@ public class mLinkedList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
-        ListNode node=head;
-        ListNode delnode;
-        if(indexOf(o)==-1){
+        int index=indexOf(o);
+        if(index==-1){
             return false;
-        }else
-        {
-            for(;node.next!=null;node=node.next){
-                if(node.next.data==o){
-                    delnode=node.next;
-                    node.next=node.next.next;
-                    delnode=null;
-                }
-            }
-            return false;
+        }else {
+            remove(index);
+            return true;
         }
     }
 
@@ -118,7 +114,11 @@ public class mLinkedList<E> implements List<E> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        boolean flag=false;
+        for(Object object:c.toArray()){
+            remove(object);
+        }
+        return flag;
     }
 
     @Override
@@ -138,71 +138,69 @@ public class mLinkedList<E> implements List<E> {
 
     @Override
     public E get(int index) {
-        ListNode node=head;
-        int count=0;
-        for(;node.next!=null;node=node.next){
-            if(count==index){
-                return (E)node.data;
-            }
-            count++;
-        }
-        return null;
+        ListNode node=getNode(index);
+        return (E)node.data;
     }
+
 
     @Override
     public E set(int index, E element) {
-        ListNode node=head;
-        int count=0;
-        for(;node.next!=null;node=node.next){
-            if(count==index){
-                node.data=element;
-            }
-            count++;
-        }
-        return null;
+        ListNode node=getNode(index);
+        node.data=element;
+        return (E)node.data;
     }
 
     @Override
     public void add(int index, E element) {
-        int count=0;
-        ListNode newnode=new ListNode(element);
-        for(ListNode node=head;node.next!=null;node=node.next){
-            if(index==count){
-                newnode.next=node.next;
-                node.next=newnode;
-            }
-            count++;
+        ListNode newNode=new ListNode(element);
+        if(index==0){
+            newNode.next=head;
+            head=newNode;
+            size++;
+        }else{
+        ListNode node=getNode(index-1);
+        newNode.next=node.next;
+        node.next=newNode;
+        size++;
         }
-
     }
 
     @Override
     public E remove(int index) {
-        ListNode node=head;
-        int count=0;
-        for(;node.next!=null;node=node.next){
-            if(count+1==index){
-                ListNode temp=node.next;
-                node.next=node.next.next;
-                return (E)temp.data;
-            }
+        E value;
+        ListNode delnode;
+        if(index==0){
+            value=(E)head.data;
+            delnode=head;
+            head=head.next;
+            delnode=null;
+            size--;
+            return value;
         }
-        return null;
+        else {
+            ListNode node = getNode(index - 1);
+            delnode = node.next;
+            value = (E) delnode.data;
+            node.next = node.next.next;
+            delnode = null;
+            size--;
+            return value;
+        }
     }
 
 
 
     @Override
     public int lastIndexOf(Object o) {
-        int count=0;
+        int index=-1;
         ListNode node=head;
-        for(;node.next!=null;node=node.next){
-            if(node.data == o){
-                return count;
+        for(int i=0;i<size;i++){
+            if(node.data==o){
+                index=i;
             }
-            count++;
+            node=node.next;
         }
-        return -1;
+        return index;
     }
 
     @Override
@@ -217,6 +215,23 @@ public class mLinkedList<E> implements List<E> {
 
     @Override
     public List<E> subList(int fromIndex, int toIndex) {
-        return null;
+        mLinkedList<E> subList=new mLinkedList<E>();
+
+        while(fromIndex<=toIndex){
+            subList.add(get(fromIndex++));
+        }
+        return subList;
     }
+
+    private ListNode getNode(int index) {
+        if(index<0 || index>size-1){
+            throw new IndexOutOfBoundsException();
+        }
+        ListNode node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+        return node;
+    }
+
 }
