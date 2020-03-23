@@ -1,9 +1,7 @@
 package List;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class mArrayList<E> implements List<E>{
 
@@ -32,27 +30,23 @@ public class mArrayList<E> implements List<E>{
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        return indexOf(o)!=-1;
     }
 
-    @Override
-    public Iterator<E> iterator() {
-        return null;
-    }
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        return (E[])array;
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
-        return null;
+        return a;
     }
 
     @Override
     public boolean add(E e) {
-        if(size>array.length){
+        if(size>=array.length){
             E[] bigger= (E[]) new Object[array.length*2];
             System.arraycopy(array,0,bigger,0,array.length);
             array=bigger;
@@ -75,16 +69,27 @@ public class mArrayList<E> implements List<E>{
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        for(Object object:c){
+            if(!contains(object)){
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public boolean addAll(Collection<? extends E> c) {
-        return false;
+
+        boolean flag=true;
+        for(Object element:c){
+            flag&=add((E)element);
+        }
+        return flag;
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends E> c) {
+
         return false;
     }
 
@@ -99,9 +104,10 @@ public class mArrayList<E> implements List<E>{
         return flag;
     }
 
+    @Deprecated
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        throw  new UnsupportedOperationException();
     }
 
     @Override
@@ -176,7 +182,21 @@ public class mArrayList<E> implements List<E>{
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        int index=-1;
+        for(int i=0;i<array.length;i++){
+            if(o==array[i]){
+                index=i;
+            }
+        }
+        return index;
+    }
+
+
+    @Override
+    public Iterator<E> iterator() {
+        E[] copy= Arrays.copyOf(array,size);
+
+        return Arrays.asList(copy).iterator();
     }
 
     @Override
@@ -191,7 +211,11 @@ public class mArrayList<E> implements List<E>{
 
     @Override
     public List<E> subList(int fromIndex, int toIndex) {
-        return null;
+        mArrayList subList= new mArrayList();
+        for(int i=fromIndex;i<=toIndex;i++){
+            subList.add(array[i]);
+        }
+        return subList;
     }
 
     private boolean equals(Object target, Object element){
