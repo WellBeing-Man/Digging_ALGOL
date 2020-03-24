@@ -1,8 +1,7 @@
-import List.mLinkedList;
-import org.junit.Test;
+import List.LinkedList.mLinkedList;
 
 import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.*;
+
 public class mLinkedListTest extends mArrayListTest{
     @Override
     public void setup() throws Exception {

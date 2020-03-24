@@ -58,8 +58,10 @@ public class mArrayListTest {
 
         list.add(0,6);
         assertThat(list.get(0),is(6));
+        assertThat(list.size(),is(5));
         list.add(5,7);
         assertThat(list.get(5),is(7));
+
     }
 
     @Test
@@ -73,7 +75,7 @@ public class mArrayListTest {
     public void containsTest(){
         assertThat(list.contains(1),is(true));
         assertThat(list.contains(55),is(false));
-    }
+      }
 
     @Test
     public void toArrayTest(){
@@ -87,14 +89,16 @@ public class mArrayListTest {
 
     @Test
     public void removeTest(){
-        list.remove(new Integer(1));
-        assertThat(list.contains(1),is(false));
-        assertThat(list.size(),is(2));
-        assertThat(list.get(1),is(3));
 
         list.remove(0);
-        assertThat(list.get(0),is(3));
+        assertThat(list.get(0),is(2));
+        assertThat(list.size(),is(2));
+
+        list.remove(new Integer(2));
+        assertThat(list.contains(2),is(false));
         assertThat(list.size(),is(1));
+        assertThat(list.get(0),is(3));
+
 
     }
 
