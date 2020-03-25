@@ -11,7 +11,6 @@ import org.junit.Before;
 import org.junit.Test;
 public class mArrayListTest {
 
-    protected List<Integer> mylist;
     protected List<Integer> list;
 
 

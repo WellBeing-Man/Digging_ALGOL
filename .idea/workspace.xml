@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9010605b-8be1-4c39-bdb6-95e211b0f92e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/List/DoubleLinkedList/DoubleLinkNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/List/DoubleLinkedList/mDoubleLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/List/Profiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/List/ProfilerListAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mDoubleLinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Stack/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Stack/StackNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Stack/mArrayStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mArrayStackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/List/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/List/LinkedList/ListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/List/mLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/List/LinkedList/mLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mArrayListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mLinkedListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +64,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -107,7 +104,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="Application.Profiling">
+  <component name="RunManager" selected="JUnit.mArrayStackTest">
     <configuration name="ListExample" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sorting.main" />
       <module name="Digging_ALGOL.main" />
@@ -153,10 +150,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="mArrayStackTest" type="JUnit" factoryName="JUnit">
+      <module name="Digging_ALGOL.test" />
+      <useClassPathOnly />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="mArrayStackTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Profiling" />
       <item itemvalue="Application.ListExample" />
       <item itemvalue="Gradle.Digging_ALGOL [build]" />
+      <item itemvalue="JUnit.mArrayStackTest" />
       <item itemvalue="JUnit.ArrayTest" />
     </list>
     <recent_temporary>
@@ -179,7 +189,8 @@
       <workItem from="1584792833372" duration="22000" />
       <workItem from="1584793008483" duration="415000" />
       <workItem from="1584793450479" duration="1011000" />
-      <workItem from="1584947170482" duration="20274000" />
+      <workItem from="1584947170482" duration="20921000" />
+      <workItem from="1585115918014" duration="6312000" />
     </task>
     <servers />
   </component>
@@ -195,58 +206,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1584947188978" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585039507401">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585121318875">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585039507401" />
-    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1584955555017">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585121318875" />
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1585123757683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1584955555017" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1585033566318">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1585123757683" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1585119746016">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585033566318" />
-    <state x="498" y="195" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585039506103">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585119746016" />
+    <state x="498" y="195" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585121318148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="195" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1585039506103" />
+    <state x="498" y="195" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1585121318148" />
     <state x="549" y="110" key="FileChooserDialogImpl" timestamp="1584947881676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584947881676" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1585041230514">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1585122283169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585041230514" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1585041230514">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585122283169" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1585122283169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585041230514" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1585041230514">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585122283169" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1585122283169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585041230514" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1585041230514">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585122283169" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1585122283169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585041230514" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585041123965">
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585122283169" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585122240233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585041123965" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1585041123965">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585122240233" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1585122240233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585041123965" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1585041123965">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585122240233" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1585122240233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585041123965" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1585041123965">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585122240233" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1585122240233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585041123965" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585122240233" />
     <state x="429" y="109" key="NewModule_or_Project.wizard" timestamp="1584792855404">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -263,5 +274,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585039883920" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/mArrayListTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
