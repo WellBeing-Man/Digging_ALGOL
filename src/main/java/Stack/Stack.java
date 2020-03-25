@@ -5,7 +5,7 @@ public interface Stack<E> {
     void push(E item);
     boolean isFull();
     E pop();
-    void delete(E item);
+    void delete();
     E peek();
 
 }

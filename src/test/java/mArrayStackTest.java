@@ -38,4 +38,34 @@ public class mArrayStackTest {
             fail();
         }catch (IndexOutOfBoundsException e){ }
     }
+
+    @Test
+    public void testPop(){
+        assertThat(myStack.pop(),is(3));
+        assertThat(myStack.pop(),is(2));
+        assertThat(myStack.pop(),is(1));
+        try{
+            myStack.peek();
+            fail();
+        }catch (IndexOutOfBoundsException e){}
+    }
+    @Test
+    public void testPeek(){
+        assertThat(myStack.peek(),is(3));
+        myStack.delete();
+        assertThat(myStack.peek(),is(2));
+        myStack.delete();
+        assertThat(myStack.peek(),is(1));
+      try {
+          myStack.delete();
+          myStack.peek();
+          fail();
+
+          myStack.delete();
+          fail();
+          
+      }catch (IndexOutOfBoundsException e){}
+    }
+
+
 }

@@ -43,7 +43,7 @@ public class mArrayStack<E> implements Stack<E> {
     }
 
     @Override
-    public void delete(E item) {
+    public void delete() {
         top--;
      }
 
