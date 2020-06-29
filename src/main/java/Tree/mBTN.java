@@ -1,50 +1,22 @@
 package Tree;
 
-import javax.swing.tree.TreeNode;
-import java.util.Enumeration;
+public class mBTN<E> {
+    mBTN left,right;
+    private E data;
+    int key;
 
-public class mTreeNode<E> implements TreeNode{
-    mTreeNode left,right;
-    E data;
-
-    public mTreeNode(E data) {
+    public mBTN(E data) {
         right=left=null;
         this.data = data;
     }
 
-
-    @Override
-    public TreeNode getChildAt(int childIndex) {
-        return null;
+    public mBTN(E data, int key) {
+        this.data = data;
+        this.key = key;
     }
 
-    @Override
-    public int getChildCount() {
-        return 0;
+    public E getNode(){
+        return data;
     }
 
-    @Override
-    public TreeNode getParent() {
-        return null;
-    }
-
-    @Override
-    public int getIndex(TreeNode node) {
-        return 0;
-    }
-
-    @Override
-    public boolean getAllowsChildren() {
-        return false;
-    }
-
-    @Override
-    public boolean isLeaf() {
-        return false;
-    }
-
-    @Override
-    public Enumeration<? extends TreeNode> children() {
-        return null;
-    }
 }
