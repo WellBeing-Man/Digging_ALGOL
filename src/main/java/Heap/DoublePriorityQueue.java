@@ -45,9 +45,6 @@ public class DoublePriorityQueue {
         return answer;
     }
 
-    public static void main(String[] args) {
-        String[] input={"I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333"};
-        new DoublePriorityQueue().solution(input);
-    }
+
 
 }

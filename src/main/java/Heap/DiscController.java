@@ -85,8 +85,5 @@ public class DiscController{
         return answer/jobs.length;
     }
 
-    public static void main(String[] args) {
-        int[][] jobs={{0,3},{1,9},{2,6}};
-        new DiscController().solution(jobs);
-    }
+
 }
