@@ -48,7 +48,4 @@ public class FindPrime {
         return false;
     }
 
-    public static void main(String[] args) {
-        new FindPrime().solution("17");
-    }
 }
