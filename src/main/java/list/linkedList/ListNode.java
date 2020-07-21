@@ -1,0 +1,22 @@
+package list.linkedList;
+
+public class ListNode {
+    public Object data;
+    public ListNode next;
+
+    public ListNode(Object data) {
+        this.data = data;
+        this.next = null;
+    }
+
+    public ListNode(Object data, ListNode next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" + "data=" + data.toString() + '}';
+    }
+
+}
