@@ -1,4 +1,4 @@
-import List.DoubleLinkedList.mDoubleLinkedList;
+import list.doublelinkedlist.mDoubleLinkedList;
 
 public class mDoubleLinkedListTest extends mArrayListTest {
     @Override

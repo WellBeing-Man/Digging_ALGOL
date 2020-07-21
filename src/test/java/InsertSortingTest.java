@@ -1,5 +1,4 @@
-import Sorting.Bubble;
-import Sorting.Insert;
+import sorting.Insert;
 
 public class InsertSortingTest extends BubbleSortingTest {
     @Override

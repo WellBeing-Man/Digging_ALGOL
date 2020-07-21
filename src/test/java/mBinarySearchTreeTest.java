@@ -1,5 +1,5 @@
-import Tree.mBTN;
-import Tree.mBinarySearchTree;
+import tree.mBTN;
+import tree.mBinarySearchTree;
 import org.junit.Before;
 import org.junit.Test;
 

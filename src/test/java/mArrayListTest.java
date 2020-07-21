@@ -3,7 +3,7 @@ import static org.junit.Assert.fail;
 import static org.hamcrest.CoreMatchers.*;
 
 import java.util.List;
-import List.*;
+import list.*;
 
 import org.junit.Before;
 import org.junit.Test;

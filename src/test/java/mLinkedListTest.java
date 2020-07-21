@@ -1,4 +1,4 @@
-import List.LinkedList.mLinkedList;
+import list.linkedList.mLinkedList;
 
 import static org.junit.Assert.assertThat;
 

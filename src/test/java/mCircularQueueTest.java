@@ -1,5 +1,5 @@
 import org.junit.Before;
-import Queue.*;
+import queue.*;
 import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
